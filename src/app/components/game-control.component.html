@@ -1,0 +1,4 @@
+<div>
+  <button *ngIf="status === 'stopped'" (click)="start()">Start</button>
+  <button *ngIf="status === 'started'" (click)="stop()">Stop</button>
+</div>

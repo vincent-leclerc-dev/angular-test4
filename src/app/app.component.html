@@ -1,0 +1,10 @@
+<div>
+  <h1>{{title}}</h1>
+  <app-game-control (tick)="onTick($event)"></app-game-control>
+  <ul>
+    <li *ngFor="let log of logs">
+      <app-odd *ngIf="log.round % 2 === 0" [number]="log.round"></app-odd>
+      <app-even *ngIf="log.round % 2 !== 0" [number]="log.round"></app-even>
+    </li>
+  </ul>
+</div>
